@@ -11,7 +11,10 @@
     "render-build": "npm install && npm run build",
     "test": "npx cypress run --browser electron",
     "test-component": "npx cypress run --component",
-    "test-gui": "npx cypress open"
+    "test-gui": "npx cypress open",
+    "lint": "eslint src --ext js,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+        "eslint": "eslint src"
   },
   "keywords": [],
   "author": "",
