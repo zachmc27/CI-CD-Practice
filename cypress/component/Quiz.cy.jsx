@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Quiz from "../../client/src/components/Quiz"
 
 describe('Quiz Component', () => {

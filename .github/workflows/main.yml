@@ -33,6 +33,17 @@ jobs:
       - name: Run Build
         run: npm run build
 
+      # Start server
+      - name: Start server
+        run: |
+            npm run start &
+        env: 
+            PORT: 3001
+    
+      # Wait for server
+      - name: Wait for server to be ready
+        run: npx wait-on http://localhost:3001
+    
       # Run tests
       - name: Run Tests
-        run: npm run test
+        run: npm run test-component && npm run test
